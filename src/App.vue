@@ -1,30 +1,41 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
+  <div id="container">
+
   </div>
-  <router-view/>
+<!--  <router-view/>-->
 </template>
 
+<script lang="ts">
+ import {defineComponent} from 'vue'
+ import  "bootstrap/dist/css/bootstrap.min.css"
+ import ColumnList from "./components/ColumnList.vue";
+ import { ColumProps } from "@/components/ColumnList.vue";
+  const testData: ColumProps[] = [
+    {
+      id:1,
+      title:'这是仿知乎的专栏',
+      description:"这是仿知乎的专栏,有一段非常有意思的介绍,可以更新一下嗷",
+      avatar:"",
+    },
+    {
+     id:1,
+     title:'这是仿知乎的专栏',
+     description:"这是仿知乎的专栏,有一段非常有意思的介绍,可以更新一下嗷",
+     avatar:"",
+    }
+  ]
+ export  default defineComponent({
+      nameL:"App",
+      components:{
+        ColumnList
+      },
+      setup(){
+          return{
+           list:testData
+          }
+      }
+ })
+</script>
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
 
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
 </style>
