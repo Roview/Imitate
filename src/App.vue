@@ -11,7 +11,8 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import ColumnList, { ColumProps } from '@/components/ColumnList.vue'
 import GlobalHeader, { UserProps } from '@/components/GlobalHeader.vue'
 const currentUser: UserProps = {
-  isLogin: false
+  isLogin: true,
+  name: '测试用户'
 }
 const testData: ColumProps[] = [
   {
@@ -53,6 +54,8 @@ export default defineComponent({
   }
 })
 </script>
-<style>
-
+<style scoped>
+ /*#container{*/
+ /*   */
+ /* }*/
 </style>
